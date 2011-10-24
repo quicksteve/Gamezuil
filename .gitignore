@@ -28,3 +28,6 @@ html-template/swfobject.js
 bin-debug/LibaryEscape.html
 
 greensock/
+bin-debug/LibaryEscape.swf
+
+.gitignore
