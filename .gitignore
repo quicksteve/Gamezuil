@@ -31,3 +31,5 @@ greensock/
 bin-debug/LibaryEscape.swf
 
 .gitignore
+
+bin-debug/LibaryEscape.swf
