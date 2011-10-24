@@ -1,8 +1,8 @@
 package
 {
-	import flash.display.Sprite;
+	import flash.display.MovieClip;
 	
-	public class LibaryEscape extends Sprite
+	public class LibaryEscape extends MovieClip;
 	{
 		public function LibaryEscape()
 		{
