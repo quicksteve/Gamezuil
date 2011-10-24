@@ -1,4 +1,6 @@
 Hallo steven is lelijk
 No way !!
+<<<<<<< HEAD
 Niels you mean.
 NO!!!!!!! MHUHAHAHAHA
+
