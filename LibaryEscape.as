@@ -1,1 +1,2 @@
-﻿package{	import flash.display.MovieClip;	import flash.display.Sprite;		public class LibaryEscape extends MovieClip	{		public function LibaryEscape()		{			var fs:Screensize = new Screensize(40,40,20,20);			addChild(fs);		}	}}
+﻿package{	import flash.display.MovieClip;	import flash.display.Sprite;	import flash.events.Event;
+		public class LibaryEscape extends MovieClip	{		public function LibaryEscape()		{			var fs:Screensize = new Screensize(40,40,20,20);			addChild(fs);			fs.fullscreenauto();		}	}}
