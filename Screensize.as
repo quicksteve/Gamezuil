@@ -1,5 +1,18 @@
 package
 {
+	/**
+	 *Author Steven Bakker
+	 * @param Posx:Number 
+	 * @param Posy:Number
+	 * @param Sizex:Number
+	 * @param Sizey:Number
+	 * 
+	 * Deze class wordt de stage groote aangepast naar fullscreen of terug.
+	 * Dit gaat doormiddel van een button die op de stage geplaast moet worden met addchild daarnaast
+	 * is er ook een mogelijkheid om hem automatishe op fullscreen te zetten.
+	 * Gebruik hiervoor de fullscreenauto() functie na de addChild van het Object!
+	 * WARNING! Alle objecten op de stage schalen mee en zullen dus groter worden!
+	 */
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
 
@@ -14,7 +27,7 @@ package
 		private var sizex:Number;
 		private var sizey:Number;
 		
-		public function Screensize(Posx:Number,Posy,Sizex,Sizey)
+		public function Screensize(Posx:Number,Posy:Number,Sizex:Number,Sizey:Number)
 		{
 			posx = Posx;
 			posy = Posy;
