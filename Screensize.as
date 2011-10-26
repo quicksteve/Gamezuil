@@ -3,7 +3,7 @@ package
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
 
-	public class ScreensizeClass extends Sprite
+	public class Screensize extends Sprite
 	{
 		import flash.display.StageDisplayState;
 		import flash.display.Sprite;
@@ -14,7 +14,7 @@ package
 		private var sizex:Number;
 		private var sizey:Number;
 		
-		public function ScreensizeClass(Posx,Posy,Sizex,Sizey)
+		public function Screensize(Posx:Number,Posy,Sizex,Sizey)
 		{
 			posx = Posx;
 			posy = Posy;
@@ -25,12 +25,17 @@ package
 			this.addEventListener(MouseEvent.CLICK,fullscreen);
 		}
 		
-		private function fullscreen(mouseEvent:MouseEvent)
+		private function fullscreen(e:MouseEvent)
 		{
-			if (stage.displayState == StageDisplayState.NORMAL) {
-				stage.displayState = StageDisplayState.FULL_SCREEN;
-			} else if(stage.displayState == StageDisplayState.FULL_SCREEN) {
-				stage.displayState = StageDisplayState.NORMAL;	
+			switch(stage.displayState) {
+				case "normal":
+					stage.displayState = "fullScreen";    
+				break;
+				case "fullScreen":
+		
+				default:
+					stage.displayState = "normal";    
+				break;
 			}
 		}
 		
