@@ -1,0 +1,6 @@
+<scenes>
+	<room1 color="blue">
+		<item1 name="sleutel" objectname="photo" filetype="jpg">De sleutel voor de deur studie hok</item1>
+		<item1 name="sleutel" objectname="photo" filetype="jpg"></item1>
+	</room1>
+</scenes>
