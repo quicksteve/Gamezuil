@@ -37,18 +37,7 @@ package
 			// zorg dat je met de 4 pijlen door de array kan navigeren
 			// geef elke plek in de array een string mee
 			// link de string aan een achtergrond
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+						
 		}
 		
 		private function plattegrondVullen():void
