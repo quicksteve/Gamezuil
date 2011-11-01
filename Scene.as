@@ -1,18 +1,1 @@
-package
-{
-	import flash.display.MovieClip;
-
-	public class Scene extends MovieClip
-	{
-		import com.greensock.events.LoaderEvent;
-		import com.greensock.loading.ImageLoader;
-		import com.greensock.loading.LoaderMax;
-		import com.greensock.loading.SWFLoader;
-		import com.greensock.loading.XMLLoader;
-		import com.greensock.loading.core.LoaderItem;
-		
-		public function Scene(xml:XML,cscene:Number) {
-			
-		}
-	}
-}
+﻿package{	import com.greensock.events.LoaderEvent;	import com.greensock.loading.ImageLoader;	import com.greensock.loading.LoaderMax;	import com.greensock.loading.SWFLoader;	import com.greensock.loading.XMLLoader;	import com.greensock.loading.core.LoaderItem;		import flash.display.MovieClip;	import flash.events.MouseEvent;		public class Scene extends MovieClip	{				private var scene:XML = new XML();		private var loaderque:LoaderMax;		private var folder:String;				public function Scene(scenedata:XML,cscene:Number) {			scene = scenedata.descendants("scene")[cscene];			folder = scenedata.scene[cscene].@id+"/";			//trace(scene.achtergrond[0]);			loaderque = new LoaderMax({name:"mainque",onProgress:progressHandler, onComplete:completeHandler, onError:errorHandler});			loaderque.append(new ImageLoader("img/"+folder+scene.achtergrond[0],{name:"background"}));			loaderque.append(new SWFLoader("swf/"+folder+scene.animaties.ani[0].file,{name:scene.animaties.ani[0].name}));						for(var i:int = 0; i<scene.inventory.item.length(); i++) {				loaderque.append(new ImageLoader("img/"+folder+scene.inventory.item[i].image,{name:scene.inventory.item[i].name}));				}			loaderque.load(true);		}				private function progressHandler(event:LoaderEvent):void {			trace("progress: " + event.target.progress);		}				private function errorHandler(event:LoaderEvent):void {			trace("error occured with " + event.target + ": " + event.text);		}				private function completeHandler(event:LoaderEvent) {			var background = loaderque.getContent("background");			this.addChildAt(background,0);						for(var i:int = 0; i<scene.inventory.item.length(); i++) {				var item = loaderque.getContent(scene.inventory.item[i].name);				item.x = scene.inventory.item[i].@x;				item.y = scene.inventory.item[i].@y;				item.name = scene.inventory.item[i].name;				this.addChildAt(item,1);				item.addEventListener(MouseEvent.CLICK,addToInventory);			}						var animatie = loaderque.getContent(scene.animaties.ani[0].name);			this.addChildAt(item,2);		}				private function addToInventory(e:MouseEvent) {			trace(e.target);		}	}}
