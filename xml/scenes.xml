@@ -1,26 +1,26 @@
 <scenes>
 	<scene id="1.1">
-		<achtergrond>projecthokje.jpg</achtergrond>
+		<achtergrond>0studiehok.jpg</achtergrond>
 		<object>
 			<object1 x="" y="">lichtknop.jpg</object1>
 			<object2 x="" y="">slot.jpg</object2>
 		</object>
 		<inventory>
-			<item id="10" x="10" y="10">
+			<item id="10" x="100" y="100">
 				<name>Sleutel</name>
 				<image>sleutel.jpg</image>
 				<description>..</description>
 			</item>
 			<item id="11" x="20" y="20">
 				<name>blaadtje</name>
-				<image>blaadje.jpg</image>
+				<image>blaadtje.jpg</image>
 				<description>..</description>
 			</item>
 		</inventory>
 		<animaties>
 			<ani>
 				<name>Edward</name>
-				<file>edward.swf</file>
+				<file>0edward.swf</file>
 				<description>..</description>
 			</ani>
 		</animaties>
